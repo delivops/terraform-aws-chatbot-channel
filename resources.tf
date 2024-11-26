@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "aws-sns-topic" {
-  name = var.slack_channel_name
+  name = "${var.chatbot_workspace_name}-${var.slack_channel_name}"
 }
 
 resource "aws_sns_topic_policy" "aws-sns-topic-policy" {
