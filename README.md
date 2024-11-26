@@ -1,6 +1,6 @@
 ![image info](logo.jpeg)
 
-# Terraform-aws-chatbot
+# Terraform-aws-chatbot-channel
 
 This Terraform module creates an Amazon SNS topic and configures an AWS Chatbot Slack channel for different types of alerts. The module supports three alert types: budget, cloudwatch, and anomalies.
 
@@ -20,7 +20,7 @@ Include this repository as a module in your existing terraform code:
 ```python
 
 ################################################################################
-# AWS CHATBOT
+# AWS CHATBOT-CHANNEL
 ################################################################################
 
 
@@ -50,18 +50,18 @@ module "chatbot-role" {
     "arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess",
     "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess"
   ]
-
   custom_role_trust_policy = data.aws_iam_policy_document.chatbot_assume_role_policy.json
 }
-module "anomalies_sns_chatbot_topic" {
-  source              = "delivops/chatbot/aws"
+
+module "aws_chatbot_channel" {
+  source              = "delivops/chatbot-channel/aws"
   #version            = "0.0.1"
 
-  slack_channel_name       = "anomalies-slack"
-  chatbot_workspace_name   = "Delivops"
+  slack_channel_name       = "aws-cost-anomalies"
+  chatbot_workspace_name   = "xxxxx"
   chatbot_role_arn         = module.chatbot-role.iam_role_arn
-  slack_channel_id         = "C0123ABC456"
-  alert_type               = "anomalies"
+  slack_channel_id         = "xxx"
+  alert_type               = "cost-anomalies"
 }
 
 ```
