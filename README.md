@@ -65,3 +65,45 @@ module "anomalies_sns_chatbot_topic" {
 }
 
 ```
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_chatbot_slack_channel_configuration.aws-slack-channel](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/chatbot_slack_channel_configuration) | resource |
+| [aws_sns_topic.aws-sns-topic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic) | resource |
+| [aws_sns_topic_policy.aws-sns-topic-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_policy) | resource |
+| [aws_chatbot_slack_workspace.workspace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/chatbot_slack_workspace) | data source |
+| [aws_iam_policy_document.aws-budget-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_alert_type"></a> [alert\_type](#input\_alert\_type) | alert type | `string` | n/a | yes |
+| <a name="input_chatbot_role_arn"></a> [chatbot\_role\_arn](#input\_chatbot\_role\_arn) | chatbot role arn | `string` | n/a | yes |
+| <a name="input_chatbot_workspace_name"></a> [chatbot\_workspace\_name](#input\_chatbot\_workspace\_name) | workspace | `string` | n/a | yes |
+| <a name="input_slack_channel_id"></a> [slack\_channel\_id](#input\_slack\_channel\_id) | slack channel id | `string` | n/a | yes |
+| <a name="input_slack_channel_name"></a> [slack\_channel\_name](#input\_slack\_channel\_name) | slack channel name | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_sns_topic_arn"></a> [sns\_topic\_arn](#output\_sns\_topic\_arn) | The ARN of the AWS SNS topic. |
+<!-- END_TF_DOCS -->
