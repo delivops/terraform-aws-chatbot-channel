@@ -42,7 +42,7 @@ module "chatbot-role" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
   version = "5.48.0"
 
-  role_name                       = "chatbot-role-test"
+  role_name                       = "chatbot-role"
   create_custom_role_trust_policy = true
   create_role                     = true
   custom_role_policy_arns = [
