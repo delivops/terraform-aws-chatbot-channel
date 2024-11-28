@@ -26,3 +26,24 @@ data "aws_iam_policy_document" "aws-budget-policy" {
     ]
   }
 }
+
+data "aws_iam_policy_document" "aws-anomaly-policy" {
+  statement {
+    sid    = "AWSAnomalyDetectionSNSPublishingPermissions"
+    effect = "Allow"
+
+    actions = [
+      "SNS:Receive",
+      "SNS:Publish"
+    ]
+
+    principals {
+      type        = "Service"
+      identifiers = ["costalerts.amazonaws.com"]
+    }
+
+    resources = [
+      aws_sns_topic.aws-sns-topic.arn
+    ]
+  }
+}
