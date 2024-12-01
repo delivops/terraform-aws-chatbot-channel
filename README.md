@@ -61,10 +61,16 @@ module "anomalies_sns_chatbot_topic" {
   chatbot_workspace_name   = "Delivops"
   chatbot_role_arn         = module.chatbot-role.iam_role_arn
   slack_channel_id         = "C0123ABC456"
-  alert_type               = "anomalies"
+  alert_type               = "cost-anomalies"
 }
 
 ```
+## information
+
+options for alert-type:
+- cost-anomalies
+- budget
+- cloudwatch-alarms
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
