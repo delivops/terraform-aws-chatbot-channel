@@ -71,6 +71,7 @@ options for alert-type:
 - cost-anomalies
 - budget
 - cloudwatch-alarms
+- all
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
