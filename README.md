@@ -1,4 +1,4 @@
-![image info](logo.jpeg)
+[![DelivOps banner](https://raw.githubusercontent.com/delivops/.github/main/images/banner.png?raw=true)](https://delivops.com)
 
 # Terraform-aws-chatbot
 
@@ -60,7 +60,7 @@ module "anomalies_sns_chatbot_topic" {
   slack_channel_name       = "anomalies-slack"
   chatbot_workspace_name   = "Delivops"
   chatbot_role_arn         = module.chatbot-role.iam_role_arn
-  slack_channel_id         = "C0123ABC456"
+  slack_channel_id         = "xxx"
   alert_type               = "cost-anomalies"
 }
 
