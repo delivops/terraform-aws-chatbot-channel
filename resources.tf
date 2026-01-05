@@ -18,7 +18,7 @@ resource "aws_sns_topic_policy" "aws-sns-topic-all-policy" {
   policy = data.aws_iam_policy_document.aws-all-policy.json
 }
 resource "aws_chatbot_slack_channel_configuration" "aws-slack-channel" {
-  configuration_name    = "${var.chatbot_workspace_name}-${var.slack_channel_name}"
+  configuration_name    = "${lower(var.chatbot_workspace_name)}-${var.slack_channel_name}"
   iam_role_arn          = var.chatbot_role_arn
   slack_channel_id      = var.slack_channel_id
   slack_team_id         = data.aws_chatbot_slack_workspace.workspace.slack_team_id
