@@ -58,7 +58,7 @@ module "anomalies_sns_chatbot_topic" {
   #version            = "0.0.1"
 
   slack_channel_name       = "anomalies-slack"
-  chatbot_workspace_name   = "Delivops"
+  chatbot_workspace_id     = "T0123ABCD"
   chatbot_role_arn         = module.chatbot-role.iam_role_arn
   slack_channel_id         = "xxx"
   alert_type               = "cost-anomalies"
@@ -97,7 +97,6 @@ No modules.
 | [aws_sns_topic_policy.aws-sns-topic-all-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_policy) | resource |
 | [aws_sns_topic_policy.aws-sns-topic-anomaly-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_policy) | resource |
 | [aws_sns_topic_policy.aws-sns-topic-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_policy) | resource |
-| [aws_chatbot_slack_workspace.workspace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/chatbot_slack_workspace) | data source |
 | [aws_iam_policy_document.aws-all-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_iam_policy_document.aws-anomaly-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_iam_policy_document.aws-budget-policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
@@ -108,7 +107,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_alert_type"></a> [alert\_type](#input\_alert\_type) | Type of alert to configure: 'budget', 'cost-anomalies', 'cloudwatch-alarms', or 'all' | `string` | n/a | yes |
 | <a name="input_chatbot_role_arn"></a> [chatbot\_role\_arn](#input\_chatbot\_role\_arn) | chatbot role arn | `string` | n/a | yes |
-| <a name="input_chatbot_workspace_name"></a> [chatbot\_workspace\_name](#input\_chatbot\_workspace\_name) | workspace | `string` | n/a | yes |
+| <a name="input_chatbot_workspace_id"></a> [chatbot\_workspace\_id](#input\_chatbot\_workspace\_id) | Slack workspace (team) ID, e.g. T0123ABCD | `string` | n/a | yes |
 | <a name="input_slack_channel_id"></a> [slack\_channel\_id](#input\_slack\_channel\_id) | slack channel id | `string` | n/a | yes |
 | <a name="input_slack_channel_name"></a> [slack\_channel\_name](#input\_slack\_channel\_name) | slack channel name | `string` | n/a | yes |
 

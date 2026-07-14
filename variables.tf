@@ -20,7 +20,7 @@ variable "chatbot_role_arn" {
   description = "chatbot role arn"
 
 }
-variable "chatbot_workspace_name" {
+variable "chatbot_workspace_id" {
   type        = string
-  description = "workspace"
+  description = "Slack workspace (team) ID, e.g. T0123ABCD"
 }
