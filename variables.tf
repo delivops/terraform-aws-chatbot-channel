@@ -24,3 +24,8 @@ variable "chatbot_workspace_id" {
   type        = string
   description = "Slack workspace (team) ID, e.g. T0123ABCD"
 }
+variable "name_prefix" {
+  type        = string
+  description = "Optional name prefix for SNS topic and Chatbot configuration_name. Defaults to chatbot_workspace_id when not set."
+  default     = null
+}
