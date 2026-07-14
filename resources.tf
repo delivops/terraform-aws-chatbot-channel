@@ -5,7 +5,7 @@ locals {
   # hyphen and cap the combined name at 128 (the tighter Chatbot limit).
   resource_name = substr(
     replace(
-      lower("${var.chatbot_workspace_id}-${var.slack_channel_name}"),
+      lower("${coalesce(var.name_prefix, var.chatbot_workspace_id)}-${var.slack_channel_name}"),
       "/[^a-z0-9_-]+/",
       "-",
     ),
