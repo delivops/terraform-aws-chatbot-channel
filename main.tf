@@ -3,9 +3,6 @@ terraform {
     aws = {}
   }
 }
-data "aws_chatbot_slack_workspace" "workspace" {
-  slack_team_name = var.chatbot_workspace_name
-}
 data "aws_iam_policy_document" "aws-budget-policy" {
   statement {
     sid    = "AWSBudgetsSNSPublishingPermissions"
