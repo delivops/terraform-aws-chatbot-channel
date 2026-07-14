@@ -108,6 +108,7 @@ No modules.
 | <a name="input_alert_type"></a> [alert\_type](#input\_alert\_type) | Type of alert to configure: 'budget', 'cost-anomalies', 'cloudwatch-alarms', or 'all' | `string` | n/a | yes |
 | <a name="input_chatbot_role_arn"></a> [chatbot\_role\_arn](#input\_chatbot\_role\_arn) | chatbot role arn | `string` | n/a | yes |
 | <a name="input_chatbot_workspace_id"></a> [chatbot\_workspace\_id](#input\_chatbot\_workspace\_id) | Slack workspace (team) ID, e.g. T0123ABCD | `string` | n/a | yes |
+| <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Optional name prefix for SNS topic and Chatbot configuration\_name. Defaults to chatbot\_workspace\_id when not set. | `string` | `null` | no |
 | <a name="input_slack_channel_id"></a> [slack\_channel\_id](#input\_slack\_channel\_id) | slack channel id | `string` | n/a | yes |
 | <a name="input_slack_channel_name"></a> [slack\_channel\_name](#input\_slack\_channel\_name) | slack channel name | `string` | n/a | yes |
 
